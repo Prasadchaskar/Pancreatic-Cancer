@@ -4,7 +4,7 @@ import pandas as pd
 
 model = pickle.load(open('model.pkl', 'rb'))
 sex_encod = pickle.load(open('sex_lbl.pkl', 'rb'))
-class_names = ['Benign Pancreatic Disease','No Pancreatic Disease','Pancreatic Disease']
+class_names = ['No Pancreatic Disease','Benign Pancreatic Disease','Pancreatic Disease']
 
 def predict(df):
     df = df[['age', 'sex', 'plasma_CA19_9', 'creatinine', 'LYVE1', 'REG1B', 'TFF1','REG1A']]
